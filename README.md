@@ -1,2 +1,11 @@
 # Invoke-PostKrbtgtResetMonitor
-Centralized detection of Golden Ticktes via anomolous kerberos tickets detection AFTER resetting the krbtgt password TWICE. No Dependencies/modules. Requires Event Log Redears or equivalent.
+
+Centralized detection of Golden Ticktes via event ID 4769 (TGS) with Error code 0x1f & TGT Anomalies. 
+
+Useful when coming to a site recently After a krbtgt double-reset.
+
+NOTE: Run this script AFTER resetting the krbtgt password TWICE (for more info, read: https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). 
+
+No Dependencies/modules. Requires Event Log Redears or equivalent (preferrably - run elevated on the PDC/one of the DCs, for better Performance and continued operation of the monitoring process)
+
+by 1nTh35h311 (Comments to yossis@protonmail.com)
