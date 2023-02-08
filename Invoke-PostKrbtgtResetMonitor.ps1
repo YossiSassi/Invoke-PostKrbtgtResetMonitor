@@ -27,7 +27,7 @@ $Transcript = ".\Monitor-Potential-GoldenTicket-Comeback_$($ENV:USERDOMAIN)_$(Ge
 Start-Transcript $Transcript;
 
 # Set Date to match the last krbtgt reset
-[datetime]$StartDate = [datetime]::FromFileTime($(Get-ADUser krbtgt -Properties pwdlastset).pwdlastset) #New-Object "System.DateTime" -ArgumentList (Get-Date).Year, (Get-Date).Month, (Get-Date).Day;
+[datetime]$StartDate = [datetime]::FromFileTime($(([adsisearcher]"samaccountname=krbtgt").FindOne().Properties.pwdlastset))
 
 Write-Host "[x] Checking events from $StartDate onwards (last KRBTGT password reset)." -ForegroundColor Yellow;
 $DCs = ([adsisearcher]"(&(objectCategory=computer)(|(primarygroupid=521)(primarygroupid=516)))").FindAll().Properties.name;
