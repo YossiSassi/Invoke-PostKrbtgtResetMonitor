@@ -1,6 +1,6 @@
 ﻿# comments to yossis@protonmail.com (1nTh35h311)
 # Detection via event ID 4769 (TGS) with Error code 0x1f + TGT Anomalies. Useful when coming to a site recently After a krbtgt double-reset.
-# Usage: Run this script AFTER resetting the krbtgt password TWICE (for more info, read: https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51)
+# Usage: Run this script AFTER resetting the krbtgt password TWICE (for more info, see: https://github.com/microsoft/New-KrbtgtKeys.ps1)
 # Requires 'Event Log Redears' permission or equivalent (preferrably - run elevated on the PDC/one of the DCs, for better Performance and continued operation of the monitoring process).
 # Note: Auditing for 'Kerberos Service Ticket Operations' must be Enabled for both Failure & Success. Check using the following command: auditpol /get /category:'Account Logon' /r | ConvertFrom-Csv | where Subcategory -like "*Kerberos*" | Format-Table 'Policy Target',Subcategory,'Inclusion Setting'
 
