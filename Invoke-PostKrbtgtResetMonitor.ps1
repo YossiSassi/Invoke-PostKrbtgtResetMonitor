@@ -17,7 +17,7 @@ $Logo = @"
  \____/\___/|_|\__,_|\___|_| |_|   \_/ |_|\___|_|\_\___|\__|  \____/_| |_|\___|\___|_|\_\
                                                                                          
  Checks for potential golden tickets by monitoring for integrity failures in new TGS requests Post-Krbtgt Reset
- by 10Root Cyber Security (comments to yossis@protonmail.com) <Version: $version>
+ (comments to yossis@protonmail.com) <Version: $version>
 
 "@
 
